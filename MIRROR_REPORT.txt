@@ -1,0 +1,46 @@
+# Mirror: https://cidadelimpa.online/contato/
+
+## File tree (exact sizes)
+- MIRROR_REPORT.txt — 10 bytes
+- contato/index.html — 3,981,023 bytes
+- contato/logo_transparent.png — 310,127 bytes
+
+## Static HTML vs PHP
+**Static HTML.** Response is `text/html; charset=UTF-8` from **LiteSpeed** with no `X-Powered-By: PHP`. The page is a single ~3.98 MB document with embedded `<style>` and inline `<script>` (no `.php` references). Not server-rendered PHP for this URL.
+
+## Tech stack
+- LiteSpeed web server
+- Single-page marketing/landing layout (Portuguese, São Paulo caçamba rental)
+- Inline CSS (design tokens: Inter + Archivo Black via Google Fonts)
+- Inline JavaScript (CEP lookup via ViaCEP API, ticker, mobile menu, Google Ads conversion on WhatsApp clicks)
+- Google Ads conversion tag: `AW-18273927730` (gtag.js from googletagmanager.com — third-party, not mirrored)
+- Google Fonts (external): Archivo Black, Inter
+- 5 inline base64-encoded images in HTML
+- 1 same-origin raster asset: `logo_transparent.png`
+
+## Same-origin asset paths (downloaded)
+| URL | Local path | Size |
+|-----|------------|------|
+| https://cidadelimpa.online/contato/ | contato/index.html | 3,981,023 bytes |
+| https://cidadelimpa.online/contato/logo_transparent.png | contato/logo_transparent.png | 310,127 bytes |
+
+## External assets (referenced, not same-origin — not mirrored per task)
+- https://www.googletagmanager.com/gtag/js?id=AW-18273927730
+- https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700;800&display=swap
+- https://fonts.googleapis.com (preconnect)
+- https://fonts.gstatic.com (preconnect)
+
+## WhatsApp links
+- Static CTA: `https://wa.me/551154442980?text=Oi%2C%20quero%20alugar%20uma%20ca%C3%A7amba` (decoded: "Oi, quero alugar uma caçamba")
+- Floating button + header: same `wa.me/551154442980` pattern
+- JS constant: `WHATSAPP_NUM = "551154442980"` — dynamic links built as `https://wa.me/${WHATSAPP_NUM}?text=...` after CEP lookup
+- Phone in footer copy: (11) 5444-2980
+
+## Form actions
+**None.** No `<form>` elements; contact flow is WhatsApp-only (+ CEP search UI calling ViaCEP, not a form POST).
+
+## Checkout / order links
+**None found.** No hrefs matching checkout, pedido, order, carrinho, pagamento, or finalizar. Navigation uses in-page anchors only: `#inicio`, `#servicos`, `#vantagens`, `#contato`, `#topo`.
+
+## In-page navigation (anchors)
+#contato, #inicio, #servicos, #topo, #vantagens

@@ -1,0 +1,39 @@
+# Clone — Cidade Limpa /contato/
+
+Origem: https://cidadelimpa.online/contato/
+
+## Pasta
+
+/Users/igor/Downloads/cidadelimpa-contato/
+
+```
+cidadelimpa-contato/
+├── LEIA-ME.txt
+├── index.html          → redireciona para contato/
+└── contato/
+    ├── index.html      ← página principal (~4 MB, HTML estático)
+    └── logo_transparent.png
+```
+
+## Deploy Hostinger
+
+**Opção A — URL `/contato/`**
+1. Envie a pasta `contato/` para `public_html/contato/`
+2. Acesse: `https://seudominio.com/contato/`
+
+**Opção B — raiz do domínio**
+1. Envie o conteúdo de `contato/` (index.html + logo) para `public_html/`
+2. Acesse: `https://seudominio.com/`
+
+## O que tem na página
+
+- Landing verde/limão (Google Ads)
+- Caçambas 3m³ R$220 · 5m³ R$280 · 7m³ R$320 · 10m³ R$450
+- Consulta de CEP (ViaCEP)
+- CTAs WhatsApp: (11) 5444-2980
+- Tag Google Ads: AW-18273927730
+
+## Observação
+
+Não há checkout nesta página — contato é só WhatsApp.
+Para PIX/Flevopay use o clone `cidadelimpa-php`.
